@@ -17,7 +17,7 @@
             <p class="text-sm text-gray-600">CRAFTING MODERN EXCELLENCE.</p>
             <h2 class="text-xl font-semibold text-gray-700 mt-4">Quote Request Form</h2>
         </div>
-        <form id="quoteForm" class="space-y-4" enctype="multipart/form-data">
+        <form action="https://formspree.io/f/xgvwdbzq" method="POST" enctype="multipart/form-data" class="space-y-4">
             <div>
                 <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
                 <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
@@ -65,19 +65,6 @@
                 </button>
             </div>
         </form>
-        <div id="thankYouMessage" class="hidden mt-4 p-4 bg-green-100 rounded-md">
-            <p class="text-green-700">Thank you for your quote request. We'll get back to you soon!</p>
-        </div>
     </div>
-
-    <script>
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would typically send the form data to your server
-            // For this example, we'll just show a thank you message
-            document.getElementById('quoteForm').classList.add('hidden');
-            document.getElementById('thankYouMessage').classList.remove('hidden');
-        });
-    </script>
 </body>
 </html>
